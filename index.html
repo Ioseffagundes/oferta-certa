@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oferta Certa — Grupo VIP p/ Mulheres Econômicas</title>
+<meta name="description" content="Economize até 80% em produtos de beleza, moda e casa! Entre no grupo VIP do WhatsApp e receba promoções exclusivas em primeira mão.">
+<meta property="og:title" content="Oferta Certa — Grupo VIP p/ Mulheres Econômicas">
+<meta property="og:description" content="Economize até 80% em produtos de beleza, moda e casa! Promoções exclusivas no grupo VIP do WhatsApp.">
+<meta property="og:image" content="https://oferta-certa.racka.com.br/assets/avatar.png">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#e8420a">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preload" href="assets/fonts/nunito-var.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  @font-face{
+    font-family:'Nunito';font-style:normal;font-weight:400 900;font-display:swap;
+    src:url(assets/fonts/nunito-var.woff2) format('woff2');
+  }
+  @font-face{
+    font-family:'Nunito';font-style:italic;font-weight:400 900;font-display:swap;
+    src:url(assets/fonts/nunito-var-italic.woff2) format('woff2');
+  }
+  :root{
+    --laranja:#f14c05;
+    --laranja-escuro:#d73305;
+    --laranja-texto:#f04a06;
+    --marrom:#6e1c01;
+    --marrom-pill:#59250d;
+    --card:#fefcf9;
+    --bege:#fdf1e9;
+    --verde:#4ca333;
+    --verde-claro:#5cb83f;
+    --cinza:#555;
+    --preto:#111;
+    --zap:#25d366;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    font-family:'Nunito',system-ui,-apple-system,'Segoe UI',sans-serif;
+    background:#c92e04;
+    color:var(--preto);
+    min-height:100vh;
+  }
+  .page{
+    max-width:520px;
+    margin:0 auto;
+    min-height:100vh;
+    background:
+      linear-gradient(155deg, rgba(255,255,255,.07) 0%, rgba(255,255,255,0) 28%),
+      linear-gradient(335deg, rgba(0,0,0,.10) 0%, rgba(0,0,0,0) 30%),
+      radial-gradient(120% 70% at 50% 18%, #f8570a 0%, #ee4805 45%, #d63304 100%);
+    position:relative;
+    overflow:hidden;
+    padding-bottom:26px;
+  }
+  /* facetas sutis do fundo */
+  .page::before{
+    content:"";
+    position:absolute;inset:0;
+    background:
+      linear-gradient(115deg, transparent 42%, rgba(255,255,255,.045) 42%, rgba(255,255,255,.045) 58%, transparent 58%),
+      linear-gradient(65deg, transparent 60%, rgba(0,0,0,.05) 60%, rgba(0,0,0,.05) 78%, transparent 78%),
+      linear-gradient(150deg, transparent 12%, rgba(255,255,255,.03) 12%, rgba(255,255,255,.03) 26%, transparent 26%);
+    pointer-events:none;
+  }
+  .page > *{position:relative}
+
+  /* ===== Header ===== */
+  header{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:20px 20px 16px;
+  }
+  .logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+  .logo svg{width:48px;height:48px;flex-shrink:0}
+  .logo-txt{line-height:1;display:flex;flex-direction:column;align-items:flex-start}
+  .logo-txt .nome{
+    font-size:24px;font-weight:900;font-style:italic;letter-spacing:-.5px;
+    white-space:nowrap;
+  }
+  .logo-txt .nome .oferta{color:#fff}
+  .logo-txt .nome .certa{color:#3d1000}
+  .logo-txt .online{
+    color:#fff;font-weight:800;font-style:italic;font-size:14px;
+    align-self:flex-end;margin-top:3px;
+  }
+  .vip{
+    display:flex;align-items:center;gap:7px;
+    background:var(--marrom-pill);
+    color:#fff;font-weight:800;font-size:14px;
+    padding:10px 16px;border-radius:999px;
+    box-shadow:0 2px 6px rgba(0,0,0,.18);
+    white-space:nowrap;
+  }
+  .vip svg{width:18px;height:18px}
+
+  /* ===== Faixa ===== */
+  .faixa{
+    background:linear-gradient(90deg,#7a2402 0%, #6e1c01 50%, #7a2402 100%);
+    color:#ffe9a8;
+    text-align:center;
+    font-weight:900;font-style:italic;
+    font-size:17px;letter-spacing:.2px;
+    padding:13px 6px;
+    text-shadow:0 1px 2px rgba(0,0,0,.35);
+    white-space:nowrap;
+  }
+
+  /* ===== Card ===== */
+  .card{
+    background:var(--card);
+    margin:56px 16px 0;
+    border-radius:28px;
+    padding:0 20px 22px;
+    box-shadow:0 10px 30px rgba(0,0,0,.18);
+    text-align:center;
+  }
+  .avatar-wrap{
+    width:176px;height:176px;
+    margin:-48px auto 0;
+    position:relative;
+  }
+  .avatar{
+    width:100%;height:100%;
+    border-radius:50%;
+    object-fit:cover;
+    display:block;
+    background:radial-gradient(circle at 50% 40%, #f8570a 0%, #e03a05 100%);
+    box-shadow:0 0 0 5px #f04a06, 0 6px 18px rgba(0,0,0,.22);
+  }
+  .avatar-badge{
+    position:absolute;right:-8px;bottom:2px;
+    width:52px;height:52px;border-radius:50%;
+    background:#fff;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 3px 10px rgba(0,0,0,.16);
+  }
+  .avatar-badge svg{width:28px;height:28px}
+
+  h1{
+    font-size:28px;line-height:1.24;font-weight:900;
+    margin-top:18px;letter-spacing:-.3px;
+  }
+  h1 .pct{color:var(--laranja-texto)}
+  .sublinhado{position:relative;display:inline-block}
+  .swoosh{display:block;margin:6px auto 0;width:290px;max-width:80%}
+  .sub{
+    color:#3c3c3c;font-size:17px;font-weight:700;line-height:1.42;
+    margin:14px auto 0;max-width:330px;
+  }
+
+  /* ===== Benefícios ===== */
+  .beneficios{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    background:var(--bege);
+    border-radius:20px;
+    margin-top:20px;
+    padding:18px 3px 16px;
+  }
+  .ben{
+    padding:0 3px;
+    display:flex;flex-direction:column;align-items:center;gap:7px;
+  }
+  .ben + .ben{border-left:1px solid #ecd9cc}
+  .ben svg{width:32px;height:32px}
+  .ben b{font-size:12px;line-height:1.22;font-weight:800}
+  .ben span{font-size:10.5px;line-height:1.28;color:#666;font-weight:600}
+
+  /* ===== Botão CTA ===== */
+  .cta{
+    display:flex;align-items:center;justify-content:center;gap:12px;
+    margin-top:22px;
+    width:100%;
+    background:linear-gradient(180deg, var(--verde-claro) 0%, var(--verde) 55%, #43962c 100%);
+    color:#fff;text-decoration:none;
+    font-weight:900;font-size:17px;letter-spacing:.2px;
+    white-space:nowrap;
+    padding:18px 8px;
+    border-radius:999px;
+    box-shadow:0 8px 20px rgba(60,150,40,.42), inset 0 1px 0 rgba(255,255,255,.35);
+    animation:pular 1.6s cubic-bezier(.36,.07,.19,.97) infinite, brilho 1.6s ease-in-out infinite;
+    will-change:transform;
+  }
+  .cta:active{transform:scale(.97)}
+  .cta .zap-circ{
+    width:34px;height:34px;border-radius:50%;
+    border:2.5px solid #fff;
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .cta .zap-circ svg{width:19px;height:19px}
+  @keyframes pular{
+    0%, 28%, 100%{transform:translateY(0) scale(1,1)}
+    8%{transform:translateY(2px) scale(1.03,.95)}
+    16%{transform:translateY(-11px) scale(.98,1.03)}
+    24%{transform:translateY(0) scale(1.02,.97)}
+  }
+  @keyframes brilho{
+    0%,100%{box-shadow:0 8px 20px rgba(60,150,40,.42), 0 0 0 0 rgba(76,163,51,.55), inset 0 1px 0 rgba(255,255,255,.35)}
+    50%{box-shadow:0 10px 26px rgba(60,150,40,.5), 0 0 0 13px rgba(76,163,51,0), inset 0 1px 0 rgba(255,255,255,.35)}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .cta{animation:none}
+    .toast{animation:none !important}
+  }
+
+  .fechado{
+    display:flex;align-items:center;justify-content:center;gap:7px;
+    margin-top:14px;color:#4a4a4a;font-size:14.5px;font-weight:700;
+    white-space:nowrap;
+  }
+  .fechado svg{width:16px;height:16px;flex-shrink:0}
+
+  .vagas{
+    margin:16px auto 0;
+    background:#fdeee0;
+    border-radius:999px;
+    padding:13px 20px;
+    font-size:18.5px;font-weight:800;color:#1c1c1c;
+  }
+  .vagas .num{color:var(--laranja-texto);font-weight:900}
+
+  .parceiras{margin-top:20px;color:#5a5a5a;font-size:16px;font-weight:700}
+  .lojas{width:100%;max-width:430px;margin-top:8px;display:block;margin-left:auto;margin-right:auto}
+
+  /* ===== Toast entradas ===== */
+  .toast-area{
+    margin-top:14px;
+    height:76px;
+    position:relative;
+    overflow:hidden;
+  }
+  .toast{
+    position:absolute;inset:0;
+    background:#fff;
+    border-radius:18px;
+    box-shadow:0 4px 16px rgba(0,0,0,.10);
+    border:1px solid #f1ece7;
+    display:flex;align-items:center;gap:13px;
+    padding:0 16px;
+    text-align:left;
+  }
+  .toast .zap-ic{
+    width:46px;height:46px;border-radius:50%;
+    background:var(--zap);
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .toast .zap-ic svg{width:26px;height:26px}
+  .toast .info{flex:1;min-width:0}
+  .toast .nome{font-weight:800;font-size:17.5px;color:#141414;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .toast .acao{font-size:14.5px;color:#6f6f6f;font-weight:600}
+  .toast .agora{
+    background:#fdeee0;color:#e8611c;
+    font-weight:800;font-size:14.5px;
+    padding:8px 15px;border-radius:999px;
+    flex-shrink:0;
+  }
+  .toast.entra{animation:toastEntra .55s cubic-bezier(.2,.8,.3,1) both}
+  .toast.sai{animation:toastSai .45s ease-in both}
+  @keyframes toastEntra{
+    from{transform:translateY(78px);opacity:0}
+    to{transform:translateY(0);opacity:1}
+  }
+  @keyframes toastSai{
+    from{transform:translateY(0);opacity:1}
+    to{transform:translateY(-78px);opacity:0}
+  }
+
+  .rodape{
+    display:flex;align-items:center;justify-content:center;gap:8px;
+    margin-top:18px;
+    color:#fff;font-weight:800;font-size:16.5px;
+    text-shadow:0 1px 2px rgba(0,0,0,.2);
+  }
+  .rodape svg{width:20px;height:20px;flex-shrink:0}
+
+  @media (max-width:390px){
+    .logo-txt .nome{font-size:21px}
+    .logo svg{width:42px;height:42px}
+    .vip{font-size:13px;padding:9px 13px}
+    h1{font-size:25px}
+    .faixa{font-size:14.5px}
+    .ben b{font-size:11.5px}
+    .cta{font-size:15px}
+    .fechado{font-size:13px}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <a class="logo" href="#" aria-label="Oferta Certa">
+      <svg viewBox="0 0 64 64" fill="none">
+        <g transform="rotate(18 32 32)">
+          <path d="M18 22c0-2.8 1.6-5.4 4.1-6.7L36 8.2c1.9-1 4.2-.9 6 .2l7.6 4.6A7.5 7.5 0 0 1 53 19.4V44a7 7 0 0 1-7 7H25a7 7 0 0 1-7-7V22z" fill="#fff"/>
+          <path d="M21.5 23.2c0-2.1 1.2-4 3-4.9l11.6-6c1.5-.8 3.2-.7 4.6.1l6.3 3.9a5.6 5.6 0 0 1 2.7 4.8V43a5 5 0 0 1-5 5H26.5a5 5 0 0 1-5-5V23.2z" fill="#f4500a"/>
+          <circle cx="35.5" cy="15.5" r="3.1" fill="#fff"/>
+          <path d="M35.5 15.5 46 6.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        <circle cx="30" cy="36" r="11.5" fill="#3fae2a"/>
+        <path d="M24.5 36.2l3.7 3.7 7-7.3" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      <span class="logo-txt">
+        <span class="nome"><span class="oferta">Oferta</span>&hairsp;<span class="certa">Certa</span></span>
+        <span class="online">.online</span>
+      </span>
+    </a>
+    <div class="vip">
+      <svg viewBox="0 0 24 24" fill="#fff"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2c-3.3 0-7 1.7-7 4v2h14v-2c0-2.3-3.7-4-7-4zm8-2a3.5 3.5 0 1 0-2.6-5.9A5.9 5.9 0 0 1 15 9c0 .6-.1 1.2-.3 1.8.7.1 1.5.2 2.3.2zm1.3 2.5c1.6.9 2.7 2.1 2.7 3.5v2h3v-2c0-1.7-2.6-3-5.7-3.5z"/></svg>
+      Grupo VIP
+    </div>
+  </header>
+
+  <div class="faixa">✨ GRUPO P/ MULHERES ECONÔMICAS ✨</div>
+
+  <div class="card">
+    <div class="avatar-wrap">
+      <img class="avatar" src="assets/avatar.png" alt="Oferta Certa" width="176" height="176">
+      <div class="avatar-badge">
+        <svg viewBox="0 0 24 24" fill="#f4500a"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2c-3.3 0-7 1.7-7 4v2h14v-2c0-2.3-3.7-4-7-4zm8-2a3.5 3.5 0 1 0-2.6-5.9A5.9 5.9 0 0 1 15 9c0 .6-.1 1.2-.3 1.8.7.1 1.5.2 2.3.2zm1.3 2.5c1.6.9 2.7 2.1 2.7 3.5v2h3v-2c0-1.7-2.6-3-5.7-3.5z"/></svg>
+      </div>
+    </div>
+
+    <h1>Economize até <span class="pct">80%</span><br>em produtos de beleza,<br><span class="sublinhado">moda e casa!</span></h1>
+    <svg class="swoosh" viewBox="0 0 290 14" fill="none" aria-hidden="true">
+      <path d="M4 9 C 70 3, 220 3, 286 7" stroke="#f4500a" stroke-width="6.5" stroke-linecap="round"/>
+    </svg>
+
+    <p class="sub">Já somos centenas de mulheres economizando com as promoções exclusivas do grupo 👇</p>
+
+    <div class="beneficios">
+      <div class="ben">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M20.6 11.5 12.5 3.4a2 2 0 0 0-1.4-.6H4.8a2 2 0 0 0-2 2v6.3c0 .5.2 1 .6 1.4l8.1 8.1a2 2 0 0 0 2.8 0l6.3-6.3a2 2 0 0 0 0-2.8z" fill="#f4500a"/><circle cx="7.5" cy="7.5" r="1.6" fill="#fff"/><path d="m9.5 14.5 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><circle cx="10" cy="14" r="1.1" fill="#fff"/><circle cx="14" cy="10" r="1.1" fill="#fff"/></svg>
+        <b>Promoções<br>exclusivas</b>
+        <span>Descontos imperdíveis</span>
+      </div>
+      <div class="ben">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 9h16l-1.2 10.1a2 2 0 0 1-2 1.9H7.2a2 2 0 0 1-2-1.9L4 9z" fill="#f4500a"/><path d="M8 11V6.5a4 4 0 0 1 8 0V11" stroke="#f4500a" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M9.5 13.5v3M12 13.5v3M14.5 13.5v3" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/></svg>
+        <b>Ofertas em<br>primeira mão</b>
+        <span>Saiba antes de todo mundo</span>
+      </div>
+      <div class="ben">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 10.5 4.6-1.1 8-5.5 8-10.5V5l-8-3z" fill="#f4500a"/><path d="m8.5 11.7 2.4 2.4 4.6-4.8" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <b>Grupo fechado<br>e seguro</b>
+        <span>Só para mulheres</span>
+      </div>
+      <div class="ben">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#f4500a"/><path d="M12 6v12M15 8.6c-.6-1-1.7-1.5-3-1.5-1.6 0-2.9 1-2.9 2.4 0 3.4 6 1.8 6 5 0 1.4-1.4 2.4-3.1 2.4-1.4 0-2.6-.6-3.2-1.7" stroke="#fff" stroke-width="1.9" stroke-linecap="round" fill="none"/></svg>
+        <b>Economia<br>de verdade</b>
+        <span>Cupons e ofertas que cabem no seu bolso.</span>
+      </div>
+    </div>
+
+    <a class="cta" href="https://chat.whatsapp.com/CBNeW69UBuTCPjB0Sw5bFM?s=cl&amp;p=i&amp;mlu=0&amp;amv=0" target="_blank" rel="noopener">
+      <span class="zap-circ">
+        <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 13.9c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .3-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.4.9-.9 1-.7 1.4.9 1.5 2 2.4 3.3 3 .4.2.6.2.8-.1.2-.2.9-1 1.1-1.3.2-.4.4-.3.7-.2l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1z"/></svg>
+      </span>
+      CLIQUE P/ ENTRAR NO GRUPO
+    </a>
+
+    <div class="fechado">
+      <svg viewBox="0 0 24 24" fill="#444"><path d="M17 9V7A5 5 0 0 0 7 7v2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2zM9 7a3 3 0 0 1 6 0v2H9V7z"/></svg>
+      Grupo fechado e exclusivo para mulheres.
+    </div>
+
+    <div class="vagas">🔥 Restam apenas <span class="num" id="vagas">19</span> vagas!</div>
+
+    <p class="parceiras">Ofertas de lojas parceiras</p>
+    <img class="lojas" src="assets/stores.png" alt="Magalu, Amazon, Shopee, Mercado Livre e Shein" loading="lazy">
+
+    <div class="toast-area" id="toastArea" aria-live="polite"></div>
+  </div>
+
+  <div class="rodape">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 10.5 4.6-1.1 8-5.5 8-10.5V5l-8-3z" fill="#ff8a1e"/><path d="m8.5 11.7 2.4 2.4 4.6-4.8" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Ambiente 100% seguro com moderação.
+  </div>
+
+</div>
+
+<script>
+(function(){
+  var nomes = [
+    "Olívia Sampaio","Camila Ferreira","Juliana Souza","Amanda Oliveira","Larissa Costa",
+    "Fernanda Lima","Patrícia Rocha","Bruna Almeida","Carolina Dias","Vanessa Martins",
+    "Aline Ribeiro","Tatiane Barbosa","Renata Cardoso","Débora Nunes","Michele Santana",
+    "Priscila Moraes","Luana Teixeira","Gabriela Pinto","Simone Farias","Adriana Castro",
+    "Bianca Moreira","Raquel Azevedo","Jéssica Ramos","Natália Freitas"
+  ];
+  var area = document.getElementById('toastArea');
+  var zapSvg = '<span class="zap-ic"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 13.9c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .3-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.4.9-.9 1-.7 1.4.9 1.5 2 2.4 3.3 3 .4.2.6.2.8-.1.2-.2.9-1 1.1-1.3.2-.4.4-.3.7-.2l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1z"/></svg></span>';
+  var i = Math.floor(Math.random() * nomes.length);
+  var atual = null;
+
+  function novoToast(nome){
+    var el = document.createElement('div');
+    el.className = 'toast entra';
+    el.innerHTML = zapSvg +
+      '<div class="info"><div class="nome">' + nome + '</div><div class="acao">Entrou no grupo agora</div></div>' +
+      '<span class="agora">Agora</span>';
+    return el;
+  }
+
+  function trocar(){
+    var nome = nomes[i % nomes.length];
+    i++;
+    var novo = novoToast(nome);
+    if (atual){
+      var antigo = atual;
+      antigo.classList.remove('entra');
+      antigo.classList.add('sai');
+      setTimeout(function(){ antigo.remove(); }, 500);
+    }
+    area.appendChild(novo);
+    atual = novo;
+  }
+
+  trocar();
+  setInterval(trocar, 3800);
+
+  // urgência: vagas diminuindo devagar
+  var vagasEl = document.getElementById('vagas');
+  var vagas = 19;
+  setInterval(function(){
+    if (vagas > 7){
+      vagas--;
+      vagasEl.textContent = vagas;
+    }
+  }, 45000);
+})();
+</script>
+</body>
+</html>
