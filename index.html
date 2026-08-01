@@ -467,8 +467,8 @@ src="https://www.facebook.com/tr?id=1395053779097677&ev=PageView&noscript=1"></n
 
   // ritmos independentes e aleatórios, simulando movimento real
   function agendarToast(){
-    var delay = 2600 + Math.random() * 6400;            // 2,6s a 9s
-    if (Math.random() < 0.2) delay = 1100 + Math.random() * 900; // rajada: alguém entra logo em seguida
+    var delay = 1700 + Math.random() * 3800;            // 1,7s a 5,5s
+    if (Math.random() < 0.25) delay = 850 + Math.random() * 750; // rajada: alguém entra logo em seguida
     setTimeout(function(){
       trocar();
       agendarToast();
@@ -476,7 +476,7 @@ src="https://www.facebook.com/tr?id=1395053779097677&ev=PageView&noscript=1"></n
   }
 
   function agendarVagas(){
-    var delay = 5000 + Math.random() * 12000;           // 5s a 17s
+    var delay = 3000 + Math.random() * 7000;            // 3s a 10s
     setTimeout(function(){
       tickVagas(Math.random() < 0.25 ? 2 : 1);          // às vezes caem duas vagas de uma vez
       agendarVagas();
