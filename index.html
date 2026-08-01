@@ -421,7 +421,12 @@ src="https://www.facebook.com/tr?id=1395053779097677&ev=PageView&noscript=1"></n
   ];
   var area = document.getElementById('toastArea');
   var zapSvg = '<span class="zap-ic"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 13.9c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .3-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.4.9-.9 1-.7 1.4.9 1.5 2 2.4 3.3 3 .4.2.6.2.8-.1.2-.2.9-1 1.1-1.3.2-.4.4-.3.7-.2l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1z"/></svg></span>';
-  var i = Math.floor(Math.random() * nomes.length);
+  // embaralha os nomes para cada visita ter uma ordem diferente
+  for (var s = nomes.length - 1; s > 0; s--){
+    var j = Math.floor(Math.random() * (s + 1));
+    var tmp = nomes[s]; nomes[s] = nomes[j]; nomes[j] = tmp;
+  }
+  var i = 0;
   var atual = null;
 
   function novoToast(nome){
@@ -447,12 +452,12 @@ src="https://www.facebook.com/tr?id=1395053779097677&ev=PageView&noscript=1"></n
     atual = novo;
   }
 
-  // urgência: vagas decrescendo em loop, no mesmo ritmo das mensagens
+  // urgência: vagas decrescendo em loop, com ritmo próprio
   var vagasEl = document.getElementById('vagas');
   var VAGAS_MAX = 19, VAGAS_MIN = 3;
   var vagas = VAGAS_MAX;
-  function tickVagas(){
-    vagas--;
+  function tickVagas(queda){
+    vagas -= queda;
     if (vagas < VAGAS_MIN) vagas = VAGAS_MAX;
     vagasEl.textContent = vagas;
     vagasEl.classList.remove('pop');
@@ -460,11 +465,27 @@ src="https://www.facebook.com/tr?id=1395053779097677&ev=PageView&noscript=1"></n
     vagasEl.classList.add('pop');
   }
 
+  // ritmos independentes e aleatórios, simulando movimento real
+  function agendarToast(){
+    var delay = 2600 + Math.random() * 6400;            // 2,6s a 9s
+    if (Math.random() < 0.2) delay = 1100 + Math.random() * 900; // rajada: alguém entra logo em seguida
+    setTimeout(function(){
+      trocar();
+      agendarToast();
+    }, delay);
+  }
+
+  function agendarVagas(){
+    var delay = 5000 + Math.random() * 12000;           // 5s a 17s
+    setTimeout(function(){
+      tickVagas(Math.random() < 0.25 ? 2 : 1);          // às vezes caem duas vagas de uma vez
+      agendarVagas();
+    }, delay);
+  }
+
   trocar();
-  setInterval(function(){
-    trocar();
-    tickVagas();
-  }, 3800);
+  agendarToast();
+  agendarVagas();
 
   // Meta Pixel: evento de conversão nos cliques para o grupo
   document.querySelectorAll('a.cta, a.vip').forEach(function(el){
