@@ -223,7 +223,13 @@
     padding:13px 20px;
     font-size:18.5px;font-weight:800;color:#1c1c1c;
   }
-  .vagas .num{color:var(--laranja-texto);font-weight:900}
+  .vagas .num{color:var(--laranja-texto);font-weight:900;display:inline-block}
+  .vagas .num.pop{animation:numPop .55s cubic-bezier(.2,.8,.3,1)}
+  @keyframes numPop{
+    0%{transform:scale(1)}
+    45%{transform:scale(1.55)}
+    100%{transform:scale(1)}
+  }
 
   .parceiras{margin-top:20px;color:#5a5a5a;font-size:16px;font-weight:700}
   .lojas{width:100%;max-width:430px;margin-top:8px;display:block;margin-left:auto;margin-right:auto}
@@ -425,18 +431,24 @@
     atual = novo;
   }
 
-  trocar();
-  setInterval(trocar, 3800);
-
-  // urgência: vagas diminuindo devagar
+  // urgência: vagas decrescendo em loop, no mesmo ritmo das mensagens
   var vagasEl = document.getElementById('vagas');
-  var vagas = 19;
+  var VAGAS_MAX = 19, VAGAS_MIN = 3;
+  var vagas = VAGAS_MAX;
+  function tickVagas(){
+    vagas--;
+    if (vagas < VAGAS_MIN) vagas = VAGAS_MAX;
+    vagasEl.textContent = vagas;
+    vagasEl.classList.remove('pop');
+    void vagasEl.offsetWidth; // reinicia a animação
+    vagasEl.classList.add('pop');
+  }
+
+  trocar();
   setInterval(function(){
-    if (vagas > 7){
-      vagas--;
-      vagasEl.textContent = vagas;
-    }
-  }, 45000);
+    trocar();
+    tickVagas();
+  }, 3800);
 })();
 </script>
 </body>
