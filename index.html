@@ -53,7 +53,7 @@
       radial-gradient(120% 70% at 50% 18%, #f8570a 0%, #ee4805 45%, #d63304 100%);
     position:relative;
     overflow:hidden;
-    padding-bottom:26px;
+    padding-bottom:118px;
   }
   /* facetas sutis do fundo */
   .page::before{
@@ -224,18 +224,23 @@
   .parceiras{margin-top:20px;color:#5a5a5a;font-size:16px;font-weight:700}
   .lojas{width:100%;max-width:430px;margin-top:8px;display:block;margin-left:auto;margin-right:auto}
 
-  /* ===== Toast entradas ===== */
+  /* ===== Toast entradas (flutuante sobre a tela) ===== */
   .toast-area{
-    margin-top:14px;
+    position:fixed;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:16px;
+    width:calc(100% - 32px);
+    max-width:472px;
     height:76px;
-    position:relative;
-    overflow:hidden;
+    z-index:99;
+    pointer-events:none;
   }
   .toast{
     position:absolute;inset:0;
     background:#fff;
     border-radius:18px;
-    box-shadow:0 4px 16px rgba(0,0,0,.10);
+    box-shadow:0 8px 28px rgba(0,0,0,.22);
     border:1px solid #f1ece7;
     display:flex;align-items:center;gap:13px;
     padding:0 16px;
@@ -260,12 +265,12 @@
   .toast.entra{animation:toastEntra .55s cubic-bezier(.2,.8,.3,1) both}
   .toast.sai{animation:toastSai .45s ease-in both}
   @keyframes toastEntra{
-    from{transform:translateY(78px);opacity:0}
+    from{transform:translateY(96px);opacity:0}
     to{transform:translateY(0);opacity:1}
   }
   @keyframes toastSai{
     from{transform:translateY(0);opacity:1}
-    to{transform:translateY(-78px);opacity:0}
+    to{transform:translateY(-64px);opacity:0}
   }
 
   .rodape{
