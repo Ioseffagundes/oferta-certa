@@ -88,19 +88,8 @@ src="https://www.facebook.com/tr?id=1395053779097677&ev=PageView&noscript=1"></n
     display:flex;align-items:center;justify-content:space-between;
     padding:11px 18px 9px;
   }
-  .logo{display:flex;align-items:center;gap:7px;text-decoration:none}
-  .logo svg{width:40px;height:40px;flex-shrink:0}
-  .logo-txt{line-height:1;display:flex;flex-direction:column;align-items:flex-start}
-  .logo-txt .nome{
-    font-size:20px;font-weight:900;font-style:italic;letter-spacing:-.5px;
-    white-space:nowrap;
-  }
-  .logo-txt .nome .oferta{color:#fff}
-  .logo-txt .nome .certa{color:#3d1000}
-  .logo-txt .online{
-    color:#fff;font-weight:800;font-style:italic;font-size:12px;
-    align-self:flex-end;margin-top:2px;
-  }
+  .logo{display:flex;align-items:center;text-decoration:none}
+  .logo img{height:46px;width:auto;display:block}
   .vip{
     display:flex;align-items:center;gap:6px;
     background:var(--marrom-pill);
@@ -308,8 +297,7 @@ src="https://www.facebook.com/tr?id=1395053779097677&ev=PageView&noscript=1"></n
   .rodape svg{width:20px;height:20px;flex-shrink:0}
 
   @media (max-width:390px){
-    .logo-txt .nome{font-size:21px}
-    .logo svg{width:42px;height:42px}
+    .logo img{height:40px}
     .vip{font-size:13px;padding:9px 13px}
     h1{font-size:25px}
     .faixa{font-size:14.5px}
@@ -326,20 +314,7 @@ src="https://www.facebook.com/tr?id=1395053779097677&ev=PageView&noscript=1"></n
 
   <header>
     <a class="logo" href="#" aria-label="Oferta Certa">
-      <svg viewBox="0 0 64 64" fill="none">
-        <g transform="rotate(18 32 32)">
-          <path d="M18 22c0-2.8 1.6-5.4 4.1-6.7L36 8.2c1.9-1 4.2-.9 6 .2l7.6 4.6A7.5 7.5 0 0 1 53 19.4V44a7 7 0 0 1-7 7H25a7 7 0 0 1-7-7V22z" fill="#fff"/>
-          <path d="M21.5 23.2c0-2.1 1.2-4 3-4.9l11.6-6c1.5-.8 3.2-.7 4.6.1l6.3 3.9a5.6 5.6 0 0 1 2.7 4.8V43a5 5 0 0 1-5 5H26.5a5 5 0 0 1-5-5V23.2z" fill="#f4500a"/>
-          <circle cx="35.5" cy="15.5" r="3.1" fill="#fff"/>
-          <path d="M35.5 15.5 46 6.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
-        </g>
-        <circle cx="30" cy="36" r="11.5" fill="#3fae2a"/>
-        <path d="M24.5 36.2l3.7 3.7 7-7.3" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      </svg>
-      <span class="logo-txt">
-        <span class="nome"><span class="oferta">Oferta</span>&hairsp;<span class="certa">Certa</span></span>
-        <span class="online">.online</span>
-      </span>
+      <img src="assets/logo.webp" alt="Oferta Certa" width="182" height="100" decoding="async">
     </a>
     <a class="vip" href="https://chat.whatsapp.com/CBNeW69UBuTCPjB0Sw5bFM?s=cl&amp;p=i&amp;mlu=0&amp;amv=0" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="#fff"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2c-3.3 0-7 1.7-7 4v2h14v-2c0-2.3-3.7-4-7-4zm8-2a3.5 3.5 0 1 0-2.6-5.9A5.9 5.9 0 0 1 15 9c0 .6-.1 1.2-.3 1.8.7.1 1.5.2 2.3.2zm1.3 2.5c1.6.9 2.7 2.1 2.7 3.5v2h3v-2c0-1.7-2.6-3-5.7-3.5z"/></svg>
